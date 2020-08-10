@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+  <form action="" method="post" id="pay" name="pay">
+    <fieldset>
+      <ul>
+        <li>
+          <label for="email">Email</label>
+          <input id="email" name="email" value="test_user_9290384@testuser.com" type="email" placeholder="" />
+        </li>
+        <li>
+          <label for="cardNumber">Credit card number:</label>
+          <input type="text" id="cardNumber" value="4235647728025682" data-checkout="cardNumber" placeholder="" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off />
+        </li>
+        <li>
+          <label for="securityCode">Security code:</label>
+          <input type="text" id="securityCode" value="123" data-checkout="securityCode" placeholder="" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off />
+        </li>
+        <li>
+          <label for="cardExpirationMonth">Expiration month:</label>
+          <input type="text" id="cardExpirationMonth" value="12" data-checkout="cardExpirationMonth" placeholder="" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off />
+        </li>
+        <li>
+          <label for="cardExpirationYear">Expiration year:</label>
+          <input type="text" id="cardExpirationYear" value="2020" data-checkout="cardExpirationYear" placeholder="" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off />
+        </li>
+        <li>
+          <label for="cardholderName">Card holder name:</label>
+          <input type="text" id="cardholderName" value="APRO APRO" data-checkout="cardholderName" placeholder="" />
+        </li>
+        <li>
+          <label for="docType">Document type:</label>
+          <select id="docType" data-checkout="docType">
+            <option value="CPF">CPF</option>
+            <option value="CNPJ">CNPJ</option>
+          </select>
+        </li>
+        <li>
+          <label for="docNumber">Document number:</label>
+          <input type="text" value="35735173820" id="docNumber" data-checkout="docNumber" placeholder="" />
+        </li>
+      </ul>
+      <input type="hidden" name="paymentMethodId" />
+      <input type="hidden" name="paymentMethod" id="paymentMethod"/>
+      <input type="button" value="Pagar" onclick="pagar();" />
+    </fieldset>
+  </form>
+  <div class="container">
+    <div class="starter-template">
+    </div>
+  </div>
+</body>
+</html>
